@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+ const mongoose = require("mongoose");
+ require("dotenv").config();
 
 // define mongodb url
-const mongoURL =
-  "mongodb+srv://ayaanlabs0092:TESpuAg11HYf3M0Z@cluster-for-testing.ltgwdbk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-For-Testing";
+const mongoURL = process.env.MONGODB_URL;
+
 // "mongodb://localhost:27017/hotels";
 
 // Setup monogdb connection :
@@ -30,3 +31,5 @@ db.on("disconnected", () => {
 
 // Export the database connection
 module.exports = db;
+
+// comment added fro testing!
